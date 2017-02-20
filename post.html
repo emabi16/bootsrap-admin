@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href=" /favicon.ico">
+
+    <title>Admin Area|Posts</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+      <link href="css/style.css" rel="stylesheet">
+      <!-- ckeditor link!-->
+<script src="http://cdn.ckeditor.com/4.6.1/standard/ckeditor.js"></script>
+
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">DashBorad</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li ><a href="index.html">Home</a></li>
+            <li class="active"><a href="post.html">Post</a></li>
+            <li><a href="user.html">Users</a></li>
+            <li ><a href="page.html">Pages</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Emanuel,Abiyo</a></li>
+            <li><a href="login.html">Logout</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+   <header id="header">
+     <div class="container">
+       <div class="row">
+         <div class="col-md-10">
+           <h1><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Posts <small> Manage Post</small></h1>
+         </div>
+         <div class="col-md-2">
+           <div class="dropdown create">
+            <button class="btn btn-primary dropdown-toggle"  type="button" data-toggle="dropdown">Create content
+            <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+              <li><a  type="button" data-toggle="modal" data-target="#addPage">Add Page</a></a></li>
+              <li><a type="button" data-toggle="modal" data-target="#addPost">Add Post</a></li>
+              <li><a type="button" data-toggle="modal" data-target="#addUser">Add Users</a></li>
+            </ul>
+</div>
+         </div>
+       </div>
+
+     </div><!-- /.container -->
+   </header>
+ <!--section!-->
+ <section id ="breadcrumb">
+    <div class="container">
+      <ol class="breadcrumb">
+        <li>
+          <a href="index.html">Dashboard</a>
+        </li>
+
+        <li class="active">
+          Post
+        </li>
+      </ol>
+    </div>
+
+ </section>
+<section id="main">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="list-group">
+          <a href="#" class="list-group-item active" id="listOne">
+            <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Dashboard</a>
+          <a href="#" class="list-group-item"> <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>Pages <span class="badge">20</span></a>
+          <a href="#" class="list-group-item"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Posts<span class="badge">56</span></a>
+          <a href="#" class="list-group-item"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>Users<span class="badge">230</span></a>
+        </div>
+          <div class="well">
+            <h4>Likes the post</h4>
+              <a href="#" class="list-group-item"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>Users<span class="badge">630</span></a>
+
+            </div>
+
+      </div>
+      <div class="col-md-9">
+          <div class="panel">
+            <div class="panel heading" id="main-panel-1">
+              <h3 class="panel-tile">Post</h3>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-sm-12">
+                    <input class="form-control" type="text" placeholder="Filter Posts..." />
+                </div>
+                </div>
+                <table class=" table table-striped table-hover">
+                  <tr>
+                    <th>
+                      Title
+                    </th>
+                    <th>
+                      Published
+                    </th>
+                     <th>
+                       Created
+                     </th>
+                     <th>
+
+                     </th>
+                     <th>
+
+                     </th>
+                  </tr>
+                  <tr>
+                    <td>
+                      Home
+                    </td>
+                    <td>
+                      <span class=" glyphicon  glyphicon-ok" aria-hiden ="true"></span>
+                    </td>
+                    <td>
+                      Dec 24, 2015
+                    </td>
+                    <td>
+
+                    </td>
+                    <th>
+
+                    </th>
+                  </tr>
+                     <tr>
+                      <td>
+                        About
+                      </td>
+                      <td>
+
+                        <span class=" glyphicon  glyphicon-ok" aria-hiden ="true"></span>
+
+                      </td>
+                      <td>
+                        Nov 03.2015
+                      </td>
+                      <td>
+                  <a class="btn btn-default" href="edit.html">Edit</a> <a class="btn btn-danger">Delete</a>
+                      </td>
+                      <td>
+
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Service
+                      </td>
+                      <td>
+                        <span class=" glyphicon  glyphicon-remove" aria-hiden ="true"></span>
+                      </td>
+
+                    <td>
+                      Janv 03.2016
+                    </td>
+
+                    <td>
+                      <a class="btn btn-default" href="edit.html">Edit</a><a class="btn btn-danger">Delete</a>
+                    </td>
+                    <td>
+
+                    </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Contact
+                      </td>
+                      <td>
+                        <span class=" glyphicon  glyphicon-remove" aria-hiden ="true"></span>
+                      </td>
+
+                    <td>
+                      Janv 03.2013
+                    </td>
+
+                    <td>
+                      <a class="btn btn-default" href="edit.html">Edit</a><a class="btn btn-danger">Delete</a>
+                    </td>
+                    <td>
+
+                    </td>
+                    </tr>
+
+                </table>
+            </div>
+          </div>
+<!--latest users!-->
+
+
+
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- footer start here!-->
+<div class="wrapper">
+  <div class ="footer">
+    <p>
+      Copyright  Emanuel , &copy 2017
+    </p>
+  </div>
+</div>
+
+
+
+<!-- Modal -->
+<!--Modal add page-->
+
+<div class="modal fade" id="addPage" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <form> <!-- form inside the modal!-->
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Add Page</h4>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+           <label>Page title:</label>
+           <input type="text" class="form-control"  placeholder="Enter Post -title">
+         </div>
+         <div class="form-group">
+            <label>Page body:</label>
+           <textarea name="editor1" class="form-control" placeholder="Enter Post body"></textarea>
+         </div>
+         <div class="checkbox">
+           <label><input type ="checkbox" />Published</label>
+         </div>
+         <div class="form-group">
+           <label>Meta tags:</label>
+           <input type="text" class="form-control" placeholder="Add some tags" />
+         </div>
+         <div class="form-group">
+           <label>Meta Description:</label>
+           <input type="text" class="form-control" placeholder="Add Meta description..." />
+         </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Submit</button>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!--Modal add post-->
+
+
+
+<div class="modal fade" id="addPost" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <form> <!-- form inside the modal!-->
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Add Post</h4>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+           <label>Post title:</label>
+           <input type="text" class="form-control"  placeholder="Enter Post -title">
+         </div>
+         <div class="form-group">
+            <label>Post body:</label>
+           <textarea name="editor2" class="form-control" placeholder="Enter Post body"></textarea>
+         </div>
+         <div class="checkbox">
+           <label><input type ="checkbox" />Published</label>
+         </div>
+         <div class="form-group">
+           <label>Meta tags:</label>
+           <input type="text" class="form-control" placeholder="Add some tags" />
+         </div>
+         <div class="form-group">
+           <label>Meta Description:</label>
+           <input type="text" class="form-control" placeholder="Add Meta description..." />
+         </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Submit</button>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<!--Modal add users-->
+<div class="modal fade" id="addUser" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <form> <!-- form inside the modal!-->
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Add User</h4>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+           <label>User Name:</label>
+           <input type="text" class="form-control"  placeholder="User name">
+         </div>
+         <div class="form-group">
+            <label>Last Name:</label>
+           <input type="text" class="form-control"  placeholder="User Last name">
+         </div>
+         <div class="checkbox">
+           <label><input type ="checkbox" />Active</label>
+         </div>
+
+         <div class="form-group">
+           <label>User Email:</label>
+           <input type="text" class="form-control" placeholder="User Email..." />
+         </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Submit</button>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!--Ckeditor script!-->
+<script>  CKEDITOR.replace( 'editor1');CKEDITOR.replace( 'editor2')</script>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <script src="js/bootstrap.min.js"></script>
+
+  </body>
+</html>
